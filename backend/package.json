@@ -1,0 +1,14 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "notes-app nodejs api",
+  "author": "Victor Lins <vrlins001@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "uuid": "8.3.2"
+  }
+}

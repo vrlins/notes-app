@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backend-notes-app
+  name: backend-notes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-notes-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: backend-notes-app
+    spec:
+      containers:
+        - image: vrlins001/backend-notes-app:latest
+          name: backend-notes-app
+          resources: {}
+          ports:
+            - containerPort: 8080

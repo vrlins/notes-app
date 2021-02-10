@@ -1,0 +1,9 @@
+<div class="note-form">
+  <mat-form-field class="note-full-width">
+    <mat-label>Leave a note</mat-label>
+    <textarea [(ngModel)]="note" matInput placeholder="Ex: I need to study terraform..."></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="sendNote()"
+    [disabled]="!(note && note.trim().length > 0)">Send</button>
+</div>

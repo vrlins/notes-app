@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend-notes-app
+  name: frontend-notes-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-notes-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frontend-notes-app
+    spec:
+      containers:
+        - image: vrlins001/frontend-notes-app:latest
+          name: frontend-notes-app
+          resources: {}
+          ports:
+            - containerPort: 80
