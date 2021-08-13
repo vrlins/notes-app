@@ -4,11 +4,22 @@
   "description": "notes-app nodejs api",
   "author": "Victor Lins <vrlins001@gmail.com>",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix --ext .js .",
+    "prettier-format": "npx prettier --write ."
   },
   "dependencies": {
     "express": "4.17.1",
+    "mongoose": "5.13.7",
     "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
+    "prettier": "2.3.2"
   }
 }

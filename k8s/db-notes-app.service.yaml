@@ -3,13 +3,13 @@ kind: Service
 metadata:
   labels:
     app: notes-app
-    name: backend
-  name: backend
+    name: db
+  name: db
 spec:
   ports:
-    - port: 8080
+    - port: 27017
       protocol: TCP
-      targetPort: 8080
+      targetPort: 27017
   selector:
     app: notes-app
-    name: backend-notes-app
+    name: db-notes-app

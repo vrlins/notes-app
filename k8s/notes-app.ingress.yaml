@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: notes-app-ingress
@@ -9,10 +9,16 @@ spec:
     - http:
         paths:
           - path: /?(.*)
+            pathType: Prefix
             backend:
-              serviceName: frontend
-              servicePort: 80
+              service:
+                name: frontend
+                port:
+                  number: 80
           - path: /api/?(.*)
+            pathType: Prefix
             backend:
-              serviceName: backend
-              servicePort: 8080
+              service:
+                name: backend
+                port:
+                  number: 8080
